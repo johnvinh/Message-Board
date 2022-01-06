@@ -46,7 +46,7 @@
             }
 
             // Displaying existing messages
-            $stmt = $pdo->query('SELECT * FROM posts');
+            $stmt = $pdo->query('SELECT * FROM posts ORDER BY time DESC');
             while ($row = $stmt->fetch()) {
                 echo '<tr>';
                 echo '<td>' . $row['time'] . '</td>';
