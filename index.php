@@ -55,6 +55,16 @@
                 echo '</tr>';
             }
 
+            if (!isset($_POST))
+                exit();
+
+            // Make sure the required details are entered before lodging message
+            if (!isset($_POST['name'] )|| !isset($_POST['message']))
+                exit();
+
+            $stmt = $pdo->prepare('INSERT INTO posts (time, user, message) VALUES (?, ?, ?)');
+            $stmt->execute([date('Y-m-d H:i:s'), $_POST['name'], $_POST['message']]);
+
             // Close database connection
             $pdo = null;
             ?>
