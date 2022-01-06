@@ -1,3 +1,22 @@
+* {
+    font-family: Verdana, sans-serif;
+}
+
 #content {
-    margin: auto;
+    padding: 1em;
+    color: #000;
+    background-color: #EDDEA4;
+    border-radius: 1em;
+    margin: 0 auto;
+    width: 50%;
+}
+
+#content h1 {
+    margin: 0 auto;
+    width: 50%;
+}
+
+input[type=submit] {
+    border: 0;
+    background-color: #D9E5D6;
 }
