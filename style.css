@@ -16,8 +16,18 @@
     width: 50%;
 }
 
-#posts {
-    border-spacing: 5em 0;
+.post {
+    display: grid;
+    grid-template-columns: 33% 66%;
+    border: 2px solid black;
+}
+
+.dateauthor {
+    grid-column: 1/1;
+}
+
+.message {
+    grid-column: 2/2;
 }
 
 input[type=submit] {

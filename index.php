@@ -17,12 +17,7 @@
             <label for="message">Your Message</label><input type="text" id="message" name="message">
             <input type="submit">
         </form>
-        <table id="posts">
-            <tr>
-                <th>Date</th>
-                <th>User</th>
-                <th>Message</th>
-            </tr>
+        <div id="posts">
             <?php
             $pdo = null;
             require('dbconnection.php');
@@ -30,17 +25,20 @@
             // Displaying existing messages
             $stmt = $pdo->query('SELECT * FROM posts ORDER BY time DESC');
             while ($row = $stmt->fetch()) {
-                echo '<tr>';
-                echo '<td>' . $row['time'] . '</td>';
-                echo '<td>' . $row['user'] . '</td>';
-                echo '<td>' . $row['message'] . '</td>';
-                echo '</tr>';
+                echo '<div class="post">';
+                // time and user
+                echo '<div class="dateauthor">';
+                echo '<p>' . $row['time'] . '</p>';
+                echo '<p>' . $row['user'] . '</p>';
+                echo '</div>';
+                echo '<div class="message">' . $row['message'] . '</div>';
+                echo '</div>';
             }
 
             // Close database connection
             $pdo = null;
             ?>
-        </table>
+        </div>
     </main>
 </div>
 </body>
