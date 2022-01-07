@@ -12,7 +12,7 @@
     </header>
     <main>
         <h2>Join the discussion!</h2>
-        <form action="index.php" method="post">
+        <form action="postmessage.php" method="post">
             <label for="name">Your Name</label><input type="text" id="name" name="name">
             <label for="message">Your Message</label><input type="text" id="message" name="message">
             <input type="submit">
@@ -55,16 +55,6 @@
                 echo '<td>' . $row['message'] . '</td>';
                 echo '</tr>';
             }
-
-            if (!isset($_POST))
-                exit();
-
-            // Make sure the required details are entered before lodging message
-            if (!isset($_POST['name'] )|| !isset($_POST['message']))
-                exit();
-
-            $stmt = $pdo->prepare('INSERT INTO posts (time, user, message) VALUES (?, ?, ?)');
-            $stmt->execute([date('Y-m-d H:i:s'), $_POST['name'], $_POST['message']]);
 
             // Close database connection
             $pdo = null;
