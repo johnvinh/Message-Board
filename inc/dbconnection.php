@@ -1,5 +1,5 @@
 <?php
-require('inc.php');
+require('config.php');
 
 $host = DB_HOST;
 $user = DB_USER;

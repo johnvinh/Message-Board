@@ -1,6 +1,6 @@
 <?php
 $pdo = null;
-require('dbconnection.php');
+require('inc/dbconnection.php');
 
 if (!isset($_POST))
     exit();

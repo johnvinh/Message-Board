@@ -20,7 +20,7 @@
         <div id="posts">
             <?php
             $pdo = null;
-            require('dbconnection.php');
+            require('inc/dbconnection.php');
 
             // Displaying existing messages
             $stmt = $pdo->query('SELECT * FROM posts ORDER BY time DESC');
