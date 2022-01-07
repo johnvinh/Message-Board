@@ -16,6 +16,10 @@
     width: 50%;
 }
 
+#posts {
+    border-spacing: 5em 0;
+}
+
 input[type=submit] {
     border: 0;
     background-color: #D9E5D6;
