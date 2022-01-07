@@ -2,6 +2,10 @@
     font-family: Verdana, sans-serif;
 }
 
+body {
+    background-color: #9FB7B9;
+}
+
 #content {
     padding: 1em;
     color: #000;
