@@ -2,8 +2,10 @@
 $pdo = null;
 require('inc/dbconnection.php');
 
-if (!isset($_POST))
+if (empty($_POST)) {
+    echo 'Missing message details!';
     exit();
+}
 
 // Make sure the required details are entered before lodging message
 if (!isset($_POST['name'] )|| !isset($_POST['message']))
