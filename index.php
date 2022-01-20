@@ -29,9 +29,9 @@
                 // time and user
                 echo '<div class="dateauthor">';
                 echo '<p>' . $row['time'] . '</p>';
-                echo '<p>' . $row['user'] . '</p>';
+                echo '<p>' . htmlspecialchars($row['user']) . '</p>';
                 echo '</div>';
-                echo '<div class="message">' . $row['message'] . '</div>';
+                echo '<div class="message">' . htmlspecialchars($row['message']) . '</div>';
                 echo '</div>';
             }
 
