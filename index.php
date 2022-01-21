@@ -12,10 +12,10 @@
     </header>
     <main>
         <h2>Join the discussion!</h2>
-        <form action="postmessage.php" method="post">
+        <form action="postmessage.php" method="post" id="form">
             <label for="name">Your Name</label><input type="text" id="name" name="name">
             <label for="message">Your Message</label><input type="text" id="message" name="message">
-            <input type="submit">
+            <input type="submit" id="submitButton">
         </form>
         <div id="posts">
             <?php
@@ -41,5 +41,6 @@
         </div>
     </main>
 </div>
+<script type="text/javascript" src="script.js"></script>
 </body>
 </html>
